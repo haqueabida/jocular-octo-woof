@@ -37,7 +37,7 @@ def num_search(filename):
         for line in f:
             if line[0:10]=='{"params":':
                 count+=1
-     
+    return count     
 #(search_terms, search_phrases) =create_search('search.json')
 
 """
