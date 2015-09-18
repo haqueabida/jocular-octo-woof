@@ -31,8 +31,14 @@ def create_search(filename):
         
     return search_terms, search_phrases
 
-      
-(search_terms, search_phrases) =create_search('search.json')
+def num_search(filename):
+    count = 0
+    with open(filename) as f:
+        for line in f:
+            if line[0:10]=='{"params":':
+                count+=1
+     
+#(search_terms, search_phrases) =create_search('search.json')
 
 """
 Bit of a hack: search_phrases does the phrases (people have searched with multiple tags)
